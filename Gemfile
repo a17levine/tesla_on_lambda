@@ -3,10 +3,6 @@ source "https://rubygems.org"
 ruby '2.5.8'
 
 gem "jets"
-
-# Include webpacker if you are you are building html pages
-gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
-
 gem "dynomite"
 gem 'tesla_api'
 gem 'slack-ruby-client'
