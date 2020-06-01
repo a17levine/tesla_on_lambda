@@ -1,0 +1,9 @@
+# There's a more elegant way to set your AWS creds to make them system wide.
+# On my rig I had to keep several separate environments with different AWS credentials.
+
+# Therefore, I set the AWS keys as a part of the deploy script, so I don't have to interfere with 
+# the other AWS environments I have.
+
+export AWS_ACCESS_KEY_ID=''
+export AWS_SECRET_ACCESS_KEY=''
+jets deploy
