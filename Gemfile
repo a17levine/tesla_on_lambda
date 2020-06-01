@@ -1,9 +1,15 @@
 source "https://rubygems.org"
 
+ruby '2.5.8'
+
 gem "jets"
 
+# Include webpacker if you are you are building html pages
+gem "webpacker", git: "https://github.com/tongueroo/webpacker.git", branch: "jets"
 
 gem "dynomite"
+gem 'tesla_api'
+gem 'slack-ruby-client'
 
 # development and test groups are not bundled as part of the deployment
 group :development, :test do
@@ -12,6 +18,7 @@ group :development, :test do
   gem 'shotgun'
   gem 'rack'
   gem 'puma'
+  gem 'pry'
 end
 
 group :test do
