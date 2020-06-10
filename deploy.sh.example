@@ -4,6 +4,15 @@
 # Therefore, I set the AWS keys as a part of the deploy script, so I don't have to interfere with 
 # the other AWS environments I have.
 
+# Set up your IAM user in the IAM console https://console.aws.amazon.com/iam/home
+# Add these permissions
+
+# AWSLambdaFullAccess
+# IAMFullAccess
+# AmazonAPIGatewayInvokeFullAccess
+# AmazonAPIGatewayAdministrator
+# AWSCloudFormationFullAccess
+
 export AWS_ACCESS_KEY_ID=''
 export AWS_SECRET_ACCESS_KEY=''
 jets deploy

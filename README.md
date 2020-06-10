@@ -17,6 +17,18 @@ This is a generic "Jets" app which is basically Ruby on Rails designed to work w
 
 ## Getting started
 
+1. Create an AWS account if you don't have one
+2. Rename the file deploy.sh.example to deploy.sh
+3. Read the instructions in that file to create a user in the [IAM console](https://console.aws.amazon.com/iam/home) with the appropriate permissions and copy the credentials into the file when you're done
+4. Rename .env.example file to .env and follow the instructions to fill out your credentials
+5. Install Ruby 2.5.8 and bundler `gem install bundler`, then `bundle install`
+6. Load the local server and test to see if it works. `jets server` should load up on port 8888. Once launched, hit http://localhost:8888/tesla/start_hvac. The Tesla App should show that the HVAC is on.
+7. Run `./deploy.sh` to deploy to AWS Lambda
+8. When the deploy succeeds you'll see the base URL, looks like this: https://4jt24j2462lj.execute-api.us-east-1.amazonaws.com/.
+9. Test invoking it buy loading this URL in the browswer: https://4jt24j2462lj.execute-api.us-east-1.amazonaws.com/dev/tesla/start_hvac. The Tesla App should show that the HVAC is on.
+10. Open the Shortcuts app on iOS, you might have to download it from the app store. Make a shortcut called 'start my car'. Use the action 'get contents of' and paste in this web address for starting the hvac. You can also have it speak 'car started' by loading up the 'speak' action in 'documents'. Repeat all of this for stopping the HVAC as well.
+11. Enjoy!
+
 
 ## IAM User Permissions for deploy
 
