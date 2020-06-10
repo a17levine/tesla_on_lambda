@@ -16,3 +16,15 @@ Problems can occur and Amazon's logging system CloudWatch is hard to work with s
 This is a generic "Jets" app which is basically Ruby on Rails designed to work within the Amazon AWS Lambda environment. If you have errors, consult the forums or the Jets documentation.
 
 ## Getting started
+
+
+## IAM User Permissions for deploy
+
+You need to enable your IAM user for these permissions to be able to deploy
+
+AWSLambdaFullAccess
+IAMFullAccess
+AmazonAPIGatewayInvokeFullAccess
+AmazonAPIGatewayAdministrator
+AWSCloudFormationFullAccess
+
